@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html data-theme>
+  <head>
+      <title>Newerparp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="c_MWfvVnNIIqnQ4c-X_kSe_KJMEPkp6O3Jy1iz7T7HywjuSrn2mrL0hQTRB30PfvHWvGiETUAetiSQILzx4lkg" />
+    
+
+    <script src="https://cdn.jsdelivr.net/gh/alumuko/vanilla-datetimerange-picker@latest/dist/vanilla-datetimerange-picker.js"></script>
+
+    <link rel="stylesheet" href="/assets/application-5f19f2473c15d2fd328bcd25f5f2084d7f3e5b38d8cc0ca5633196fb27c3b971.css" data-turbo-track="reload" />
+    <script src="/assets/application-8c1f9a4f6ba335dd75fbbefc9ea0598f94c726ebc7b54ecff6039b27e9bb6b8c.js" data-turbo-track="reload" defer="defer"></script>
+    <script type="module">
+      import "https://cdn.skypack.dev/rhino-editor@^0.9.0/cdn/exports/index.js"
+    </script>
+    
+  </head>
+
+  <body>
+    <turbo-cable-stream-source channel="OnlineChannel" signed-stream-name="Im9ubGluZV9hY2NvdW50cyI=--0a8b6f1f35d6af8f9bb8b58c79a9139df5681910000dcbf065239015d266f418"></turbo-cable-stream-source>
+    <div>
+      <div id="message-container" class="bg-base-100 bg-global bg-no-repeat bg-fixed bg-cover max-h-screen overflow-auto min-h-screen md-4 flex flex-col">
+    <div class="flex flex-col space-y-4 min-h-full grow">
+        <div class="opacity-90 text-base-content p-4 min-h-full grow">
+            <div class="flex flex-col space-y-4">
+                <nav class="navbar p-4 bg-base-300">
+                    <div class="flex flex-col md:flex-row gap-y-4 join-vertical w-full gap-4">
+                        <div class="w-full md:w-1/2">
+                            <form action="/chat/docfight/log" accept-charset="UTF-8" method="get">
+                                <div class="join w-full">
+                                    <input class="join-item px-2 w-full bg-base-200 text-base-content" data-controller="datepicker" data-datepicker-start-value="2016-12-31 20:17:48 UTC" data-datepicker-end-value="2018-02-27 05:17:09 UTC" type="text" name="date_between" id="date_between" />
+                                    <input type="submit" name="commit" value="Submit" class="btn join-item" data-disable-with="Submit" />
+                                </div>
+</form>                        </div>
+                        <div class="w-full md:w-1/2">
+                            <nav class="pagy_nav pagination join join-item w-full flex flex-row" role="navigation">
+  <button class="page prev w-10 btn btn-sm btn-disabled join-item">&lsaquo;</button>
+  <button class="page btn btn-sm btn-primary current join-item grow">1</button>
+  <a href="/chat/docfight/log?page=2"   rel="next" class="page next btn btn-sm">2</a>
+  <a href="/chat/docfight/log?page=3"   class="page next btn btn-sm">3</a>
+  <a href="/chat/docfight/log?page=4"   class="page next btn btn-sm">4</a>
+  <button class="page btn btn-sm btn-disabled gap join-item">&hellip;</button>
+  <a href="/chat/docfight/log?page=8"   class="page next btn btn-sm">8</a>
+  <a href="/chat/docfight/log?page=2"   rel="next" aria-label="next" class="page next w-10 btn btn-sm join-item">&rsaquo;</a>
+</nav>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex justify-between items-center bg-base-300 p-4">
+                    <p>
+                        <span class="pagy-info">Displaying items <b>1-100</b> of <b>783</b> in total</span>
+                    </p>
+                    <div class="flex flex-col md:w-80">
+                        <select class="select w-full max-w-xs bg-base-200" data-turbolinks-permanent data-controller="theme-select" data-choose-theme>
+    <option value="">Default</option>
+    <option value="emerald">Emerald</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+    <option value="felt">Felt</option>
+    <option value="cupcake">Cupcake</option>
+    <option value="bumblebee">Bumblebee</option>
+    <option value="corporate">Corporate</option>
+    <option value="synthwave">Synthwave</option>
+    <option value="retro">Retro</option>
+    <option value="cyberpunk">Cyberpunk</option>
+    <option value="valentine">Valentine</option>
+    <option value="halloween">Halloween</option>
+    <option value="garden">Garden</option>
+    <option value="forest">Forest</option>
+    <option value="lofi">Lo-Fi</option>
+    <option value="pastel">Pastel</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="wireframe">Wireframe</option>
+    <option value="black">Black</option>
+    <option value="luxury">Luxury</option>
+    <option value="dracula">Dracula</option>
+    <option value="cmyk">CMYK</option>
+    <option value="autumn">Autumn</option>
+    <option value="business">Business</option>
+    <option value="acid">Acid</option>
+    <option value="lemonade">Lemonade</option>
+    <option value="night">Night</option>
+    <option value="coffee">Coffee</option>
+    <option value="winter">Winter</option>
+</select>
+                        <div data-controller="contrastslider">
+                            <label>
+                                <div class="label">
+                                    <span class="label-text">Text Contrast Correction</span>
+                                    <span data-contrastslider-target="label" class="label-text-alt">20%</span>
+                                </div>
+                                <input data-contrastslider-target="input" type="range" min="0" max="150" value="30" step="1" class="range" />
+                            </label>
+                            <input id="contrastslider_output" data-contrastslider-target="output" type="hidden">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-full w-full">
+                    <turbo-frame class="w-screen h-screen" id="chat_12185780">
+    <div class="flex "> 
+        <!-- Main Chat Area -->
+        <div class="">
+            <!-- Chat Messages -->
+            <div id="messages" data-controller="autoscroll" class="flex flex-col  overflow-y-auto p-4">
+              <div class="flex w-auto max-w-full cursor-pointer">
+                <div class="flex bg-base-100 rounded-lg my-1 p-3 gap-3">
+                  <p data-controller="colouradjust" class="text-gray-500"><span class='grow whitespace-pre-wrap'>~~~ <a target="_blank" href="/chat/docfight">/chat/docfight</a> ~~~</span></p>
+                </div>
+              </div>
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300406983' class='grow text-gray-500 whitespace-pre-wrap'>Mom [] marked the chat as not safe for work.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300406996' class='grow text-gray-500 whitespace-pre-wrap'>Mom [] marked the chat as NSFW extreme.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300407021' class='grow whitespace-pre-wrap' style='color:#76a61c;'>lol</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300407047' class='grow whitespace-pre-wrap' style='color:#363369;'>Hit</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300407090' class='grow whitespace-pre-wrap' style='color:#363369;'>Hot</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300407119' class='grow text-gray-500 whitespace-pre-wrap'>Mom [] changed the topic to "holy shit"</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300407210' class='grow text-gray-500 whitespace-pre-wrap'>DeeryNoel [] is now WEE ARE NUMBER 2 [].</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300407292' class='grow text-gray-500 whitespace-pre-wrap'>Mom [] edited the chat information.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex bg-base-100 rounded-lg my-1 p-3">
+      <p class="text-gray-500">
+          <span id='message_300445861' class='grow text-gray-500 whitespace-pre-wrap'>anonymous [??] is now Revenant [].</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300445950' class='grow whitespace-pre-wrap' style='color:#0155a9;'><span style='bgcolor:#000000;'><a href=https://goo.gl/4MphCa><span style='color:#880015;'><span style='font-family:lucida console;'>REVENANT:</span></span></a> <span style='font-family:lucida console;'>* What&apos;s going on in here. </span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300446278' class='grow whitespace-pre-wrap' style='color:#76a61c;'>the fight isn&apos;t starting yet</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300446911' class='grow whitespace-pre-wrap' style='color:#0155a9;'><span style='bgcolor:#000000;'><a href=https://goo.gl/4MphCa><span style='color:#880015;'><span style='font-family:lucida console;'>REVENANT:</span></span></a> <span style='font-family:lucida console;'>* Okay, I&apos;ll wait. Make some popcorn. </span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300454099' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie was still gripping her new trusty knife. Her purple eyes were filled with a hate fueled determination as she stepped forward deeper into the judgement hall.  Her pace reflecting her  reckless rage and how she was itching for a fight. Docster was going to die today... <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300457558' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>The music chugged on with its melody, but it seemed the world around Jessie was going dark and numb. It was mildly blurry. A blanket of darkness enveloped her in a sphere, so all she would be able to do is walk forward, according to the bleeding wall behind her.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300461340' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie continued to persist forward. She didn&apos;t care if she knew where she was going or didn&apos;t. Jessie was blind with rage. Of all the fucking humans to mess with? Docster chose fucking wrong. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300462666' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>This time, the song was fading, growing far away. Burbling of water replaced it. It wasn&apos;t loud water, it was more like the sound of an outdoor pool, silent yet lapping with ease. Into view came a familiar, spherical area. The walls were blue with embedded crystals, a slightly rectangular pond was buried in the middle, and overall, it was silent. The paths that would lead to Napstablook&apos;s farm/house, Undyne&apos;s place, the small duck, and onwards were dark and shadowed suddenly. It seemed they were blocked off. The roof was nowhere to be seen.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300463556' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> &quot;Are you  going to keep dicking with me or what? COME OUT YOU FUCKING PUSSY&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300464586' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>No one responded. It was all well in the false Waterfall.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300470156' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie was irritated  enough as is as continued to yell into the illusion. &quot;I SAID TO FUCKING COME OUT! YOU FUCKING STUPID PIECE A&apos;SHIT!&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300471176' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>&quot;<span style='font-family:arial;'>Love is a powerful thing. You came all this way just to get Nat&apos;s soul back, didn&apos;t you? And you didn&apos;t even bring me a soul in the process. A little disappointing, but heartfelt. And I mean the lowercase love. Level of violence is weak, in my opinion. Why do you want their soul so badly?</span>&quot; The man&apos;s voice echoed.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300475671' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie tensed as she gripped her knife tighter. &quot;YOU&apos;RE MAKING CRAP UP!&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300476287' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>&quot;<span style='font-family:arial;'>You didn&apos;t answer my question, girly.</span>&quot; They seemed to be mocking Nat and Jessie at the same time.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300479991' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> &quot;I don&apos;t have to answer shit!  Now show yourself!&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300481506' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>The area went silent again. The soft sound of machinery replaced that of his voice, clicking and whirring.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300481922' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie waited impatiently as she looked around... She wasn&apos;t going to take to kindly to a sneak attack. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300482681' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>From the corridor, a silhouette made itself present. Nat...?</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300483137' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie turned to Nat, however she wasn&apos;t naive... Jessie did know if this Nat was friend or FOe just yet. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300484020' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>Beside it, another appeared, threateningly similar to Jessie. The taller and more masculine wrapped its arm around the other.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300485504' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie squinted at the silhouettes.  &quot;What in the?&quot; Didn&apos;t matter, they were obviously a pair of fakes. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300486659' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>They looked at eachother endearingly, according to the lit-up eyes in the darkness, both vibrant amber. A hum of voices left the corridor.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300489572' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie eyed them waiting for whatever these two were to make the first move... What the fuck? <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300490727' class='grow whitespace-pre-wrap' style='color:#8f65b1;'>{{ Won&apos;t be on much tonight cause it&apos;s new years, hope all goes well.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300491127' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>Suddenly, a long object pierced through the Jessie bot, right in the chest and all the way through. In a counter fight, the head of the Nat bot exploded as soon as it was blown clean off its neck. Neither of them moved after that. &quot;<span style='font-family:arial;'>A living couple.</span>&quot;</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300491664' class='grow whitespace-pre-wrap' style='color:#76a61c;'>*loving</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300491687' class='grow whitespace-pre-wrap' style='color:#76a61c;'>nice</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300542927' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie growled. &quot;You done?  I&apos;m not too impressed with your fucking dumbass toys.&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300545654' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> Shadows creeped into the Judgement Hall, Nightmare slowly rising from them as they kept moving forward. The king pushed back his cape and chuckled, looking around as he swaggered along the corridor . &quot;<i> My, my. Talk about overdone. How many of my flowers have died in this place? Tch, might as well add a cowardly rat to the fray.</i>&quot;</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300547509' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>&quot;<span style='font-family:arial;'>...Aw. I thought you&apos;d like them.</span>&quot; With that, it appeared that they were rebuilding, the Nat robot pulling their arm from the chest of the Jessie one. They both stepped forward into the light. also fuck i can&apos;t find my nat and jessie melon i had. it wasn&apos;t htat good anyway, so i&apos;m <a href=https://www.youtube.com/watch?v=axDnArDalwE>leaving you with wanderlust.</a> There they stood, two copper-bronze robots, shimmering yet rusted, with loud winds spinning in their back. They bounced slightly in place to a built-in beat. &quot;<span style='font-family:arial;'>My little Wind-up Wrestlers, hmm? Can you handle a dance?</span>&quot; Both of them suddenly posed, Nat with their arms raised defensively and false feet apart while Jessie&apos;s gun arms clicked into place, feet the same as her partner&apos;s.<br /> <br />Meanwhile... Night was met with an empty hall other than the music blaring from above him, same song being sung desperately, a cry of fear. But the further he stepped forward, the more Doc&apos;s own shadows grew, the hallway fading into darkness, nothing behind him even if it was just the Judgement Hall two seconds before. &quot;<span style='font-family:arial;'>Wow, someone&apos;s cocky,</span>&quot; Docster said sarcastically with an echo.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300551142' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> &quot;<i> And someone is overcompensating. What&apos;s the matter, that desperate for attention?</i>&quot; Purple pupils apathetically looked around him, still walking forwards.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300551662' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> &quot;Tch. Like I said toys...&quot; She gripped her knife rushing toward the Jessie robot. After all Jessie absolutely loathed fire arms, and frequently she&apos;d try to dispatch anyone with a gun first and foremost. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300553090' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>&quot;<span style='font-family:arial;'>You were a little fast to get here, huh? That was cute, though. The thing with the tree. Congratulations. You finally got together, hmm? At least, from what I could see. Bah. What am I speaking of? You&apos;re missing out on the fun. Step right up.</span>&quot; Ahead of Nightmare came into view the two robots, Jessie, and the section of Waterfall. The Jessie bot narrowly dodged, raising her gun up to Jessie and revving up to fire with a harsh squealing sound. Nat glanced behind them to see Night, instantly tensing. &quot;<span style='font-family:arial;'>Someone&apos;s giving you the stinky eye.</span>&quot;</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300556545' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie ducked sweeping her leg under her cheap copy hoping to cause it to stumble. She could live a sword, most likely not a gun shot. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300558409' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>The Jessie bot did, in fact, stumble, narrowly missing and instead hitting the wall. That caught Nat&apos;s attention, in which they launched forward to catch Jessbot before she collided with the ground, lifting her to her feet then glaring with frustration at the real Jessie.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300560693' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie bounced back up still holding her knife. &quot;What?&quot;  She glared coldly at the machine, what did he give them feelings too? Tch, as if that matters. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300722140' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> He quirked an eye ridge at the robots&apos; display  then tensed himself when he saw Jessie. What the hell was that bitch doing here? Night&apos;s snapped his attention to the Nat robot, growling. &quot;<i> I never seen such pathetic constructs in my life. What&apos;s the matter Doc, not enough toys when you were a kid?</i>&quot; Nightmare made no haste, melting down into the shadows on the floor. Three inky tendrils sprung from under the Nat robot like a claw, the tips trying to pierce through its upper thigh.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300724337' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>That made the bot turn their attention from Jessie, instead going to the tendrils that skewed their leg. They reached down and slit right through their own leg until it was cleanly chopped off. Night would be allowed to take the remains down, but on the bot itself, it rebuilt quickly and easily from metal that flitted from the corridors. Meanwhile, the Jess bot leapt forward, gun raised again and aimed at Jessie while she stepped aside in fear of getting sliced.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300724750' class='grow whitespace-pre-wrap' style='color:#0155a9;'><span style='bgcolor:#000000;'><a href=https://goo.gl/4MphCa><span style='color:#880015;'><span style='font-family:lucida console;'>REVENANT:</span></span></a> <span style='font-family:lucida console;'>* Finally I can start eating this popcorn. </span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300726641' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> The leg remains were flung by the tendrils before sinking down again, this time Nat&apos;s shadow seemingly peeling itself off the floor to create and ink like doppelgänger. It didn&apos;t wait for a reaction, instead shot an arm forward to sock the real one across the face.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300727855' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie pulled out the knife she stole from Insanse all that time again trying to jam the blade down the gun&apos;s barrel before rushing  past her doppelganger  and kicking her back trying to send the machine fumbling towards the Nat bot. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300729861' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>Nat bot was punched across the face, head spinning on their neck for a moment before they regained themself and tried a hit at the shadow. It worked, actually--Docster seemed to plan ahead. Nat was preoccupied with the shadow while Jessbot was sent back to her companion. Nothing stopped them from clanging into eachother and toppling over into a pile of robot. That only lasted two seconds or so with Nat&apos;s arm hooking around Jessbot&apos;s and then Nat stumbling to their feet, properly sending Jessie up on their back so she could land a kick right at Jessie at the shoulder/head area.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300732177' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessing being the nimble thing she was dodged the way of Jessie&apos;s kick. If this was all these robots had, well then they were a fucking joke. Obviously they were inexperienced in actually fighting, however she was still anxious about the gun... <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300733093' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> The shadow let itself be hit, head reeling back on impact. It didn&apos;t fall however and kept its grown, this time charging full on towards Nat with the intention to tackle it down.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300735413' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>Before the collision, both robots had settled and recollected. The Jessbot was pulled against Nat in which she raised her functioning gun and shot right at the shadow, the bullet piercing through and likely slowing it down. This was knowing that Docster was definitely ready for shadows to attack. He was prepared for most possibilities, and it&apos;s pretty easy to crack the code of Nightmare. He&apos;s not a glitch, you know. Nat released Jess with a spin, stepping back and watching the shadow rush in front of them. They almost dodged incorrectly.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300738410' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> The bullets did slow it down, but they didn&apos;t go through it. They instead were slowly being swallowed by the gelatinous ink body. It feigned a hit towards Nat, instead as it arm shot forward the shadow side stepping around the other and raising its arm. It took the shape of Jessie&apos;s gun and spat out the bullets that were earlier fired on it. Doc is a filthy glitch. Filthy.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300739370' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie was still on her feet looking for her next opportunity to strike.  Thinking it was about time to deal with Nat she pulled the pistol full of blanks out of her pockvet and threw at them, hoping to &apos;stun&apos; it momentarily  before rushing at them for a harsh kick to the torso. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300739639' class='grow whitespace-pre-wrap' style='color:#76a61c;'>im still laughing</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300739659' class='grow whitespace-pre-wrap' style='color:#76a61c;'>jessie just fucking throws guns</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300740085' class='grow whitespace-pre-wrap' style='color:#363369;'>got her attack from insanse</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300740182' class='grow whitespace-pre-wrap' style='color:#76a61c;'>SHE THROWS GUNS</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300740265' class='grow whitespace-pre-wrap' style='color:#9370db;'>((Actually she got it from before that))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300740372' class='grow whitespace-pre-wrap' style='color:#9370db;'>((She threw guns on the surface too))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300740785' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie is Hotline Miami)) <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300741152' class='grow whitespace-pre-wrap' style='color:#76a61c;'>so the shadow fired at nat?</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300741341' class='grow whitespace-pre-wrap' style='color:#363369;'>yes, behind Nat</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300741780' class='grow whitespace-pre-wrap' style='color:#76a61c;'>aight *thumbs up emoji*</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300744976' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>The bullets hit right above the wind. The wind was sideways at the time, so instead they landed in Nat&apos;s neck, their entire head exploding off. The Jessbot, on the other hand, stepped in the way of the pistol, getting hit and responding in absolutely no way, yet the kick was dealt and she was forced to the side. The head of the Natbot rebuilt itself within 30 seconds with metal crawling up their side so they could turn around and face both of the monsters assaulting the duo.<br />Suddenly, something glowed in the water.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300749880' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> The doppelgänger twitched as it lowered its arm then fully sank down to the floor, returning to simply being Nat&apos;s shadow. Nightmare himself rising from the shadows on the wall and calmly leaning on it. His eyes were locked on the pool of water. &quot;<i>Another of your shitty toys, Doc?</i>&quot;</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300752437' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie  didn&apos;t dare turn away from the two robots, even if they were easy to deal with, she didn&apos;t want to give them a hit on her.  &quot;Hey pipsqueak!  What do you see from there?&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300754830' class='grow whitespace-pre-wrap' style='color:#9370db;'>((Help I&apos;ve been handed champagne DX))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300754836' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>In the water, it appeared there was the reflection of a soul. It pulsed gently. <i><span class="text-xs"><span class="text-xs">&quot;They&apos;re mechanical! The winds are what give them their power! The winds!!&quot;</span></span></i> It was hard to hear, but it was definitely the whisper of a desperate someone.<br />The robots, meanwhile, took their time, Nat charging forward at an incredible speed and swiping Jessie&apos;s legs out from under her before trying to hook their arm on her with a stab. Jessie aimed her gun straight at Nightmare.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300754949' class='grow whitespace-pre-wrap' style='color:#76a61c;'>drink it</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755039' class='grow whitespace-pre-wrap' style='color:#363369;'>don&apos;t drink it, champagne is shit))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755076' class='grow whitespace-pre-wrap' style='color:#76a61c;'>chug it</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755147' class='grow whitespace-pre-wrap' style='color:#9370db;'><a href=https://45.media.tumblr.com/9d33d6d47e7f89b2aaa51027d056d2c3/tumblr_n39socGy5R1r74128o1_500.gif><span style='color:#9370db;'>Lo</span></a><a href=http://i1.kym-cdn.com/photos/images/original/001/147/571/0f3.gif><span style='color:#9370db;'>pp</span></a><a href=https://41.media.tumblr.com/d59399b0be78ef71ed16da0c74eb5cec/tumblr_nytiy1aInf1umlca4o1_500.png><span style='color:#9370db;'>y:</span></a><span style='font-family:Jester;'>  ／人◕‿‿ ◕人＼||&lt; DX))</span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755353' class='grow whitespace-pre-wrap' style='color:#ca8ee1;'><a href=https://www.youtube.com/watch?v=FZUcpVmEHuk>Noel</a><a href=https://i.gyazo.com/214199115bcd2d0e730a9cfed83b2579.png>:</a> chug chug chug chug c hugc hucghucguchucgcuchuchuchgcuhcuchugchcugcuhcuhcugchucghucghcughucghchugchug <a href=http://masked-pyrope.tumblr.com>🗑</a> &lt;- My tumblr.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755538' class='grow whitespace-pre-wrap' style='color:#363369;'>it tastes like shit sprite with soap, i was forced to drink it))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755738' class='grow whitespace-pre-wrap' style='color:#9370db;'><a href=https://45.media.tumblr.com/9d33d6d47e7f89b2aaa51027d056d2c3/tumblr_n39socGy5R1r74128o1_500.gif><span style='color:#9370db;'>Lo</span></a><a href=http://i1.kym-cdn.com/photos/images/original/001/147/571/0f3.gif><span style='color:#9370db;'>pp</span></a><a href=https://41.media.tumblr.com/d59399b0be78ef71ed16da0c74eb5cec/tumblr_nytiy1aInf1umlca4o1_500.png><span style='color:#9370db;'>y:</span></a><span style='font-family:Jester;'>  ／人◕‿‿ ◕人＼||&lt; Downed it))</span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755871' class='grow whitespace-pre-wrap' style='color:#9370db;'><a href=https://45.media.tumblr.com/9d33d6d47e7f89b2aaa51027d056d2c3/tumblr_n39socGy5R1r74128o1_500.gif><span style='color:#9370db;'>Lo</span></a><a href=http://i1.kym-cdn.com/photos/images/original/001/147/571/0f3.gif><span style='color:#9370db;'>pp</span></a><a href=https://41.media.tumblr.com/d59399b0be78ef71ed16da0c74eb5cec/tumblr_nytiy1aInf1umlca4o1_500.png><span style='color:#9370db;'>y:</span></a><span style='font-family:Jester;'>  ／人◕‿‿ ◕人＼||&lt; Candy in face right now))</span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300755908' class='grow whitespace-pre-wrap' style='color:#76a61c;'>LMAO</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300756090' class='grow whitespace-pre-wrap' style='color:#363369;'>*prays for your taste buds*))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300757078' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie&apos;s ears picked up on the advice and sprang into action, trying to get behind one of the robots. Pull out their wind up key huh? <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300759206' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> &quot;<i>The winds? </i>&quot; Nightmare quickly turned around to catch the robot aiming it gun on him. Fine then. Back into the shadows it was for him, this time multiple tendrils trying to pierce through both of Jessie robot&apos;s legs  like  a bear trap to try to keep it in place.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300760996' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>When she fired, it missed, instead hitting the wall. The shadows that crawled up her legs caused her to be idle, looking around frantically. also hint dogamy and dogaressa. think before you kill. Nat was likely the target for Jessie, seeing they were the closest as they stumbled, turning on their heel in surprise. They lashed out their sharpened arm to try and cut the real Jessie across the stomach.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300764582' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> More and more of the tendrils rose from the robot&apos;s shadow, clawing up and piercing through its metal casing, some wrapping up the hollow rib like chest and pulling down. Two shots of ink forced themeselves inside the guns, an attempt to keep the robot in place and block her guns.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300765168' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie barely staggered back as Nat got a clean hit on her. There was a large gash on her &quot;borrowed&quot; yellow hoodie now, along with a cut across her gut. She the tried to swerve around Nat&apos;s Robot yanking the wind up key as she passed. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300766936' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>The key wasn&apos;t yanked out, but Nat was definitely pulled back. It would take more than a yank to get it cleanly out of there. They grinted as the wind continued to spin. Jessbot noticed the occurance and tensed immediately, entire body just suddenly... Falling apart. Then she rebuilt herself outside the tendrils with ease, the wind connecting itself to her back and starting to spin MUCH faster than it was so she could propel forward and try for a hit at Jessie&apos;s face. Her back was exposed, and Nat was still on the ground, struggling against the pull.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300771747' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> Right when she freed herself from his grasp, the tendrils sank down, Nightmare&apos;s voice echoing about the room.  <span style='bgcolor:black;'><span style='color:white;'><i> My my, I see what is happening here. The empty toy goes to the rescue of his hurt partner. Nehehe, oh~ How absolutely...</i></span></span> Right under her shadow multiple thick tendrils wrapped itself around the wind, pushing back against its movement while ink seeped down to the mechanisms that kept it attached and freezed over them all in an attempt to make it easier to break it off.</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300775532' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> Jessie spun on her heal trying to follow Nightmare&apos;s example and forcing the wind up key the wrong way. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300775976' class='grow whitespace-pre-wrap' style='color:#76a61c;'>so night did the thing to jessbot, jessie is doing the thing to natbot??</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300776378' class='grow whitespace-pre-wrap' style='color:#9370db;'><a href=https://45.media.tumblr.com/9d33d6d47e7f89b2aaa51027d056d2c3/tumblr_n39socGy5R1r74128o1_500.gif><span style='color:#9370db;'>Lo</span></a><a href=http://i1.kym-cdn.com/photos/images/original/001/147/571/0f3.gif><span style='color:#9370db;'>pp</span></a><a href=https://41.media.tumblr.com/d59399b0be78ef71ed16da0c74eb5cec/tumblr_nytiy1aInf1umlca4o1_500.png><span style='color:#9370db;'>y:</span></a><span style='font-family:Jester;'>  ／人◕‿‿ ◕人＼||&lt; Yep))</span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300776487' class='grow whitespace-pre-wrap' style='color:#363369;'>yep))</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300776526' class='grow whitespace-pre-wrap' style='color:#76a61c;'>thumbs up emoji</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300777628' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>That surely did something, causing Jessbot to stop in her spot mid-punch, her body shivering tensely. Natbot had the same reaction, almost like a malfunctioning toy as their head shook repetitively. Just one yank and their winds would be out.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300777768' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>...A strong yank.</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300779052' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> They were just machines anyway. Jessing pressed her foot against Nat Bot&apos;s back and used her leg to had to her pulling efforts. Rip in shit wind up wrestlers. <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300780165' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> Five more shadows joined the others and yanked back forcefully while others pushed against it to help with leverage. <span style='bgcolor:black;'><span style='color:white;'><i><span style='font-family:mono;'>Pathetic.</span></i></span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300782240' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>Both the robots gave hisses and pops of protest, their heads jerking and bodies trembling, the winds struggling against the force, but that was before they were suddenly disconnected from both bodies. With the winds out, the Natbot and Jessbot stared listlessly at eachother for a second, their lights dimmed from amber to dark brown, and they fell apart. The world around them went dark. Waterfall changed into empty air, cold and howling, the metal that made up the toys dying into dust. The winds went with the rest of the ash, left to the wind. Everything was dark and silent.<br />&quot;<span style='font-family:arial;'>Good job.</span>&quot;</span></span></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300783534' class='grow whitespace-pre-wrap' style='color:#e01111;'><a href=https://docs.google.com/document/d/1rUaymsBnu0PD9CXgaXOl-IYQs5K-YLetAnjWgMBmnMg/edit?usp=sharing><span style='color:#FF0000;'>J</span><span style='color:#FF0018;'>e</span><span style='color:#FF0131;'>s</span></a><a href=http://image.prntscr.com/image/229456fdaed24100817446b1ba30fcff.png><span style='color:#FF0249;'>s</span><span style='color:#FF0362;'>i</span><span style='color:#FF047A;'>e:</span></a> &quot;Fuckin&apos; whatever. Now are you going to fuckin&apos; give the soul back or what?&quot; She spat with complete hatred. &quot;Or are you actually going to fight now that we broke you stupid fuckin&apos; toys?&quot; <a href=http://i.xomf.com/qbnyw.jpg><span style='color:#e01111;'>*</span></a><a href=http://prnt.sc/c94pe4><span style='color:#e01111;'>~</span></a><a href=https://www.youtube.com/watch?v=FJUJW589HZI><span style='color:#e01111;'>👊</span></a><a href=http://i.xomf.com/rcwyl.jpg><span style='color:#e01111;'>~</span></a><a href=http://i.xomf.com/yxxfj.jpg><span style='color:#e01111;'>*</span></a></span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300784657' class='grow whitespace-pre-wrap' style='color:#2e2052;'><a href=http://66.media.tumblr.com/a951691309709bcd40d1d6278264cbab/tumblr_o9vksjOvIU1vqs8aio1_1280.jpg><span style='color:indigo;'>Ni</span></a><a href=http://68.media.tumblr.com/ff973353a906c8b3444bdddb7527f631/tumblr_oeei8bY7c71u2ftxho1_400.jpg><span style='color:indigo;'>gh</span></a><a href=http://68.media.tumblr.com/563c951515ae5a298b29ef824e30c350/tumblr_ofubue2nwj1vptapjo1_540.gif><span style='color:indigo;'>tm</span></a><a href=http://68.media.tumblr.com/708380999de31caa37e5381e11d5d45d/tumblr_odwwfjVdKE1ukaae5o1_1280.jpg><span style='color:indigo;'>ar</span></a><a href=http://66.media.tumblr.com/e01269d0aa1953ef71922edeccc0b86f/tumblr_o3wpkaTn4y1v09yy3o1_1280.png><span style='color:indigo;'>e:</span></a> His form manifested itself again in a swarm of shadows, Nightmare crossing his arms and scoffing. &quot;<i>How cowardly. Having simple toys to fight your battles. Any other more boring tricks, I&apos;d love to get some time to make you writhe in agony. Tick tock, Doc.</i>&quot;</span>
+      </p>
+    </div>
+</div>
+
+                <!-- Incoming Message -->
+                <div class="flex w-full cursor-pointer">
+    <div data-controller="colouradjust anchor-blanker" class="flex rounded-lg px-3">
+      <p class="text-base-content">
+          <span id='message_300787545' class='grow whitespace-pre-wrap text-gray-500'><span style='bgcolor:#989898;'><span style='color:#666666;'>&quot;<span style='font-family:arial;'>That was such a nice show to watch, you two. I&apos;m impressed by the power you two hold in your tiny palms. You took longer than I expected, though. Pshh--you even needed a hint from fucking Nat. But I didn&apos;t permit it.</span>&quot; Silence filled a long gap. The wind was louder and more chilling. If they were to look below them, snow would be just under their feet, and then it would extend as far as the eye could see. Tall trees started to paint themselves on the landscape. All were only about a meter or two apart, long like fingers reaching into the sky endlessly, and skinny. The darkness that rained down from the sky was matched with a light snowfall. &quot;<span style='font-family:arial;'>How about let&apos;s have another round. Hmhmhm... Hopefully you don&apos;t <i>sleep with the fishes.</i></span>&quot;</span></span></span>
+      </p>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</turbo-frame>
+                </div>
+                <nav>
+                    <div class="flex flex-col md:flex-row gap-y-4 join-vertical w-full gap-4">
+                        <div class="w-full">
+                            <nav class="pagy_nav pagination join join-item w-full flex flex-row" role="navigation">
+  <button class="page prev w-10 btn btn-sm btn-disabled join-item">&lsaquo;</button>
+  <button class="page btn btn-sm btn-primary current join-item grow">1</button>
+  <a href="/chat/docfight/log?page=2"   rel="next" class="page next btn btn-sm">2</a>
+  <a href="/chat/docfight/log?page=3"   class="page next btn btn-sm">3</a>
+  <a href="/chat/docfight/log?page=4"   class="page next btn btn-sm">4</a>
+  <button class="page btn btn-sm btn-disabled gap join-item">&hellip;</button>
+  <a href="/chat/docfight/log?page=8"   class="page next btn btn-sm">8</a>
+  <a href="/chat/docfight/log?page=2"   rel="next" aria-label="next" class="page next w-10 btn btn-sm join-item">&rsaquo;</a>
+</nav>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+  </body>
+</html>
